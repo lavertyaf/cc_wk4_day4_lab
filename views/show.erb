@@ -1,0 +1,13 @@
+<h1>Student enrolled record</h1>
+<p>First name: <%= @student.first_name %></p>
+<p>Second name: <%= @student.second_name %></p>
+<p>House: <%= @student.get_house.name %></p>
+<p>Age: <%= @student.age %></p>
+
+<form action="/students/<%= @student.id %>/edit" method="get">
+  <input type="submit" value="Update Student Record"/>
+</form>
+
+<form action="/students/<%= @student.id %>/delete" method="post">
+    <input type="submit" value="Delete Student Record"/>
+</form>
